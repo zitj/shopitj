@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
 body {
 	margin: 0;
 	padding: 0;
@@ -19,6 +18,7 @@ header {
 }
 .logo {
 	color: rgba(135, 84, 255);
+	cursor: pointer;
 }
 .logo h2 {
 	margin: 10px 0 0 0;
@@ -42,6 +42,14 @@ header nav {
 	width: 40px;
 	height: 40px;
 	position: relative;
+	cursor: pointer;
+	transition: 0.2s;
+}
+.navElement:hover {
+	transform: scale(1.1);
+}
+.navElement:active {
+	transform: scale(1.09);
 }
 .navElement img,
 .navElement svg {
@@ -55,9 +63,9 @@ header nav {
 
 #shoppingCartCounter {
 	position: absolute;
-	background: rgb(60, 250, 253);
+	background: rgb(72, 240, 255);
 	border: 1px solid rgb(135, 84, 255);
-
+	color: rgb(39, 2, 124);
 	padding: 0px 4px;
 	line-height: 15px;
 	font-size: 13px;
@@ -81,12 +89,13 @@ header nav {
 .product {
 	background: white;
 	border: 1px solid rgb(219, 219, 219);
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 	padding: 2em 3em;
 	text-align: center;
 	transition: 0.2s;
 	opacity: 0.9;
 	cursor: pointer;
+	width: 15%;
 }
 .product:hover {
 	transform: translateY(-2px);
@@ -95,6 +104,15 @@ header nav {
 .product img {
 	width: 150px;
 	height: 150px;
+}
+.product h3 {
+	text-transform: capitalize;
+}
+.product p:nth-of-type(1) {
+	color: rgb(66, 66, 66);
+}
+.product p:nth-of-type(2) {
+	font-weight: 600;
 }
 .product button {
 	cursor: pointer;
