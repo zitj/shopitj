@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	background: rgb(235, 235, 235);
+}
+header {
+	height: 60px;
+	background: white;
+	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+.center {
+	display: flex;
+	justify-content: space-between;
+	width: 70%;
+	margin: 0 auto;
+}
+.logo {
+	color: rgba(135, 84, 255);
+}
+.logo h2 {
+	margin: 10px 0 0 0;
+}
+header nav ul {
+	list-style: none;
+	padding: 0;
+	width: 300px;
+}
+header nav {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 0.5em;
+	width: 100px;
+}
+
+.navElement {
+	background: rgb(135, 84, 255);
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	position: relative;
+}
+.navElement img,
+.navElement svg {
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#shoppingCartCounter {
+	position: absolute;
+	background: rgb(60, 250, 253);
+	border: 1px solid rgb(135, 84, 255);
+
+	padding: 0px 4px;
+	line-height: 15px;
+	font-size: 13px;
+	right: -10%;
+	top: -10%;
+	border-radius: 50%;
+	z-index: 1;
+}
+#containerOfProducts {
+	display: flex;
+	width: 70%;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	justify-items: center;
+	padding: 3em;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.product {
+	background: white;
+	border: 1px solid rgb(219, 219, 219);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+	padding: 2em 3em;
+	text-align: center;
+	transition: 0.2s;
+	opacity: 0.9;
+	cursor: pointer;
+}
+.product:hover {
+	transform: translateY(-2px);
+	opacity: 1;
+}
+.product img {
+	width: 150px;
+	height: 150px;
+}
+.product button {
+	cursor: pointer;
+	padding: 0.5em 1em;
+	outline: none;
+	border: none;
+	background: rgb(135, 84, 255);
+	color: white;
+}
+.product button:hover {
+	opacity: 0.8;
+}
+.product button:active {
+	opacity: 1;
+}
