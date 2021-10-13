@@ -1,4 +1,4 @@
-export const addProductToBasket = (array, product, basketNetWorth) => {
+export const addProductToBasket = (array, product, basketNetWorth, counter) => {
 	if (array.length > 0) {
 		array.forEach((item) => {
 			if (item.id === product.id) {
@@ -13,8 +13,10 @@ export const addProductToBasket = (array, product, basketNetWorth) => {
 
 	array.forEach((item) => {
 		basketNetWorth += item.totalPrice;
+		counter += item.quantity;
 	});
 
 	localStorage.setItem('basket', JSON.stringify(array));
 	localStorage.setItem('basketNetWorth', basketNetWorth);
+	localStorage.setItem('counter', counter);
 };

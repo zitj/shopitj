@@ -2,6 +2,7 @@ import { products } from '../data/products.js';
 import { renderProducts } from './renderProducts.js';
 import { renderCart } from './renderCart.js';
 import { addProductToBasket } from './addProductToBasket.js';
+import { changeCounterStyle } from './changeCounterStyle.js';
 
 const shoppingCartButton = document.getElementById('shoppingCartButton');
 const shoppingCartCounter = document.getElementById('shoppingCartCounter');
@@ -23,10 +24,11 @@ document.addEventListener('click', (e) => {
 			}
 		});
 
-		addProductToBasket(basket, newProduct, basketNetWorth);
+		addProductToBasket(basket, newProduct, basketNetWorth, counter);
 
-		counter++;
-		shoppingCartCounter.innerText = counter;
+		shoppingCartCounter.innerText = localStorage.getItem('counter');
+
+		changeCounterStyle(localStorage.getItem('counter'), shoppingCartCounter);
 	}
 });
 
