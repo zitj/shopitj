@@ -110,23 +110,33 @@ header nav {
 #shoppingList .product {
 	width: 100%;
 	padding: 1.3em 0;
-	margin-bottom: 0.11em;
+	margin-bottom: 0.081em;
 	display: flex;
 	justify-content: space-around;
 	box-shadow: none;
 }
-#shoppingList .heading {
-	color: rgb(135, 84, 255);
-	background: rgb(255, 255, 255);
+#shoppingCart .heading {
+	color: rgb(255, 255, 255);
 	display: flex;
 	justify-content: space-around;
-	width: 45%;
+	width: 100%;
+	border: 1px solid rgb(219, 219, 219);
+	border-radius: 5px 5px 0px 0px;
 }
-#shoppingList .heading svg {
-	margin-top: 1em;
+#shoppingCart header {
+	background: rgb(135, 84, 255);
+	border-radius: 5px 5px 0px 0px;
+	box-shadow: none;
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
 }
-#shoppingList .heading h2 {
-	margin-left: -2em;
+#shoppingCart header svg {
+	margin-top: 0.5em;
+}
+#shoppingCart header h2 {
+	margin-left: -18.5em;
+	margin-top: 0.5em;
 }
 .product:hover {
 	transform: translateY(-2px);
