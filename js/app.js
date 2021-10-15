@@ -12,7 +12,7 @@ let basket = [];
 let basketNetWorth = 0;
 let counter = 0;
 
-renderProducts(products);
+// renderProducts(products);
 
 document.addEventListener('click', (e) => {
 	if (e.path[0].nodeName == 'BUTTON' && e.path[1].className == 'product') {

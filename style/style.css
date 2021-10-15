@@ -35,6 +35,22 @@ header nav {
 	padding-top: 0.5em;
 	width: 100px;
 }
+#shoppingCart,
+#containerOfProducts,
+.navElement img,
+.navElement svg {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+#shoppingCart {
+	width: 40%;
+}
+#shoppingList {
+	display: flex;
+	flex-direction: column;
+}
 
 .navElement {
 	background: rgb(135, 84, 255);
@@ -55,10 +71,6 @@ header nav {
 .navElement svg {
 	width: 20px;
 	height: 20px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 }
 
 #shoppingCartCounter {
@@ -83,10 +95,6 @@ header nav {
 	justify-content: space-around;
 	justify-items: center;
 	padding: 3em;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 }
 .product {
 	background: white;
@@ -99,6 +107,27 @@ header nav {
 	cursor: pointer;
 	width: 15%;
 }
+#shoppingList .product {
+	width: 100%;
+	padding: 1.3em 0;
+	margin-bottom: 0.11em;
+	display: flex;
+	justify-content: space-around;
+	box-shadow: none;
+}
+#shoppingList .heading {
+	color: rgb(135, 84, 255);
+	background: rgb(255, 255, 255);
+	display: flex;
+	justify-content: space-around;
+	width: 45%;
+}
+#shoppingList .heading svg {
+	margin-top: 1em;
+}
+#shoppingList .heading h2 {
+	margin-left: -2em;
+}
 .product:hover {
 	transform: translateY(-2px);
 	opacity: 1;
@@ -106,6 +135,10 @@ header nav {
 .product img {
 	width: 150px;
 	height: 150px;
+}
+#shoppingList .product img {
+	width: 100px;
+	height: 100px;
 }
 .product h3 {
 	text-transform: capitalize;
