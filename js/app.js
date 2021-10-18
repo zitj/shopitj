@@ -13,6 +13,9 @@ let basket = [];
 let basketNetWorth = 0;
 let counter = 0;
 
+renderProducts(products);
+shoppingCartCounter.innerHTML = localStorage.getItem('counter');
+
 document.addEventListener('click', (e) => {
 	if (e.path[0].nodeName == 'BUTTON' && e.path[1].className == 'product') {
 		const productClicked = e.path[1];
@@ -32,7 +35,7 @@ document.addEventListener('click', (e) => {
 });
 
 shoppingCartButton.addEventListener('click', () => {
-	renderCart(products);
+	renderCart(JSON.parse(localStorage.getItem('basket')));
 });
 
 homepageButton.addEventListener('click', () => {
