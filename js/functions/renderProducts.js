@@ -1,6 +1,9 @@
 const containerOfProducts = document.getElementById('containerOfProducts');
+const shoppingCart = document.getElementById('shoppingCart');
 
 export const renderProducts = (products) => {
+	shoppingCart.style.display = 'none';
+	containerOfProducts.style.display = 'flex';
 	let template = '';
 	products.forEach((product) => {
 		template += `

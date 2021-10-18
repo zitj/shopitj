@@ -1,9 +1,10 @@
 import { products } from '../data/products.js';
-import { renderProducts } from './renderProducts.js';
-import { renderCart } from './renderCart.js';
-import { addProductToBasket } from './addProductToBasket.js';
-import { changeCounterStyle } from './changeCounterStyle.js';
+import { renderProducts } from './functions/renderProducts.js';
+import { renderCart } from './functions/renderCart.js';
+import { addProductToBasket } from './functions/addProductToBasket.js';
+import { changeCounterStyle } from './functions/changeCounterStyle.js';
 
+const homepageButton = document.getElementById('homepageButton');
 const shoppingCartButton = document.getElementById('shoppingCartButton');
 const shoppingCartCounter = document.getElementById('shoppingCartCounter');
 
@@ -11,8 +12,6 @@ let newProduct;
 let basket = [];
 let basketNetWorth = 0;
 let counter = 0;
-
-// renderProducts(products);
 
 document.addEventListener('click', (e) => {
 	if (e.path[0].nodeName == 'BUTTON' && e.path[1].className == 'product') {
@@ -33,5 +32,9 @@ document.addEventListener('click', (e) => {
 });
 
 shoppingCartButton.addEventListener('click', () => {
-	renderCart();
+	renderCart(products);
+});
+
+homepageButton.addEventListener('click', () => {
+	renderProducts(products);
 });
