@@ -1,9 +1,10 @@
 import { cartHeading } from '../components/cartHeading.js';
+
 const containerOfProducts = document.getElementById('containerOfProducts');
 const shoppingList = document.getElementById('shoppingList');
 const shoppingCart = document.getElementById('shoppingCart');
 
-export const renderCart = (array) => {
+export const renderCart = (array, totalPrice) => {
 	containerOfProducts.style.display = 'none';
 	shoppingCart.style.display = 'block';
 	shoppingCart.innerHTML = cartHeading;
@@ -26,4 +27,11 @@ export const renderCart = (array) => {
 	});
 	shoppingList.innerHTML = template;
 	shoppingCart.append(shoppingList);
+	shoppingCart.innerHTML += `
+		<footer>
+		<p>Total price </p>
+		<p>${totalPrice} RSD</p>
+		
+		</footer>
+	`;
 };

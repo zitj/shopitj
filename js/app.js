@@ -14,7 +14,9 @@ let basketNetWorth = 0;
 let counter = 0;
 
 renderProducts(products);
-shoppingCartCounter.innerHTML = localStorage.getItem('counter');
+
+if (localStorage.getItem('basket')) basket = JSON.parse(localStorage.getItem('basket'));
+if (localStorage.getItem('counter')) shoppingCartCounter.innerHTML = localStorage.getItem('counter');
 
 document.addEventListener('click', (e) => {
 	if (e.path[0].nodeName == 'BUTTON' && e.path[1].className == 'product') {
@@ -35,7 +37,7 @@ document.addEventListener('click', (e) => {
 });
 
 shoppingCartButton.addEventListener('click', () => {
-	renderCart(JSON.parse(localStorage.getItem('basket')));
+	renderCart(JSON.parse(localStorage.getItem('basket')), JSON.parse(localStorage.getItem('basketNetWorth')));
 });
 
 homepageButton.addEventListener('click', () => {
